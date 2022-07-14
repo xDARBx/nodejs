@@ -58,28 +58,90 @@ ul {
 
 
 body {
-	color: var(--white);
+	color: var(--white) !important;
 	font-family: 'New Rocker';
 	-webkit-font-smoothing: antialiased;
 	background-color: var(--black);
 }
 
+.login {
+	background-color: black !important;
+}
+
+#loginsale {
+	position: relative;
+}
+
+#loginsale, #loginvideo { 
+	position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    height: 35%;
+    object-fit: cover;
+}
+
+#loginsalet {
+	font-family: 'New Rocker';
+    margin-top: 0px;
+    background: var(--black);
+    font-size: 100px;
+    font-weight: 400;
+    text-align: center;
+    mix-blend-mode: multiply;
+    width: 100%;
+}
+
+.form-floating {
+	color: #000 !important;
+}
+
+body, #backend {
+	background-color: rgb(58, 3, 3);
+}
+
+th { 
+	background-color: white;
+	color: black !important;
+}
+
+div, .container-mb-4, td {
+	color: white;
+}
+
+.navbar {
+	background-color: #000 !important;
+}
+
+caption {
+	text-align: center;
+	background-color: var(--black);
+	color: var(--white);
+}
+
+#backend video {
+	width: 100%;
+}
+
 #backend h1 {
 	text-align:center;
 	padding: 10px;
-	background-color: rgb(241, 246, 147);
-	color: rgb(65, 65, 65);
+	background-color: rgb(58, 3, 3);
+	color: rgb(255, 255, 255);
 }
 
 #admin-productos img {
     max-width: 100%;
     height:auto;
     max-height: 200px;
+	border-radius: 20px;
+	box-shadow: 0px 10px 10px 10px rgb(0, 0, 0);
 }
 
 input#producto {
     font-size: 12px;
-    line-height:3
+    line-height:3;
+	color: var(--white);
 }
 .product-short-description {
 	text-overflow: ellipsis;
@@ -88,6 +150,7 @@ input#producto {
 	-webkit-box-orient: vertical;
 	overflow-x: hidden;
 	overflow-y: hidden;
+	color: var(--white);
 }
 .product-thumb:hover {
   	cursor: pointer;
@@ -97,6 +160,7 @@ input#producto {
 }
 .product-price {
     font-size: 24px;
+	color: var(--white);
 }
 
 .product-item .product-thumb:hover img{
@@ -104,10 +168,10 @@ input#producto {
 }
 
 .bi {
-  	transition: .3s all;
+  	transition: .5s all;
 }
 footer .bi:hover {
-  	color:#00aced;
+  	color:#33464d;
 }
 
 #backend th,
@@ -134,7 +198,7 @@ footer .bi:hover {
 }
 
 #backend td a:hover {
-	color: #00aced;
+	color: #ffffff;
 	text-decoration: underline
 }
 

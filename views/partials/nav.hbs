@@ -23,6 +23,13 @@
                         <a class="nav-link" href="/contacto">Contacto</a>
                     </li>
                 </ul>
+                <!--<div class="col-md-4 col-xs-12 col-sm-4 d-flex justify-content-end align-items-center">-->
+                {{#if logueado}}
+                    <a href="/logout"><button type="button" class="btn btn-outline-danger">LOGOUT: {{usuario}} </button></a> | <a href="/admin"><button type="button" class="btn btn-outline-primary">ADMIN</button></a>
+                {{else}}
+                <a href="/login"><button type="button" class="btn btn-outline-success">LOGIN</button></a>
+                {{/if}}
+            <!--</div>-->
             </div>
         </div>
     </nav>

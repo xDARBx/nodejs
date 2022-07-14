@@ -9,8 +9,12 @@
 
 
   <main class="form-signin">
-    <form action="login" method="post">
+    <br><br><br><br><br><br>
 
+    {{#if error}}
+      <div class="text-center alert alert-danger" role="alert" >{{error}}</div>
+    {{/if}}
+    <form action="login" method="post">
       <h1 class="h3 mb-3 text-center">Acceso al panel de control</h1>
 
       <div class="form-floating">
@@ -28,9 +32,12 @@
 
     <a href="/admin">IR A ADMIN (MODO DEV)</a>
 
-  </main>
+  <div id="loginsale">
+      <video id="loginvideo" autoplay muted preload loop src="https://cdn.videvo.net/videvo_files/video/free/2015-03/large_watermarked/fire_background_loop2_videvo2_preview.mp4"></video>
+    <h1 id="loginsalet">DARB</h1>
+  </div>  
 
-
+</main>
 
 </body>
 

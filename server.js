@@ -1,8 +1,31 @@
 const express = require('express')
+const session = require('express-session')
+const MySQLStore = require('express-mysql-session')(session);
 const app = express()
 const hbs = require('hbs')
 var path = require('path');
 require('./helpers/helper');
+
+let puerto = process.env.PORT 
+
+let opciones = {
+    host     : 'baibnzngtd2xyd4hbrfk-mysql.services.clever-cloud.com',
+    port     : 3306,
+    user     : 'uy4mcrsgljkazc9s',
+    password : 'JhIsFqFbDyY0k5r8f3hx',
+    database : 'baibnzngtd2xyd4hbrfk'
+}
+
+let sessionStore = new MySQLStore(opciones)
+
+app.use(session({
+    key: 'cookie_22007',
+    secret: "sarasa",
+    store: sessionStore,
+    resave: false,
+    saveUninitialized: false,
+    cookie: { maxAge: 300000 } // 5 minutos (ms)
+}))
 
 
 // Para que tome los datos de los formularios
@@ -32,6 +55,6 @@ app.use(function(req, res) {
 });
 
 
-app.listen(3010, function () {
-    console.log("El servidor está online en puerto 3010")
+app.listen(puerto, function () {
+    console.log("El servidor está online en puerto ${puerto}")
 })
